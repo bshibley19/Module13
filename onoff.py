@@ -1,4 +1,4 @@
-import RoboPiLib as RPL
+import cool as RPL
 from setup import RPL
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
