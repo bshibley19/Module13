@@ -12,7 +12,7 @@ while time.time() < t_end:
     RPL.servoWrite(motorR, 1000)
     RPL.servoWrite(motorL, 2000)
 
-while time.time() == range(t_end,t_max):
+while time.time() > t_end:
     RPL.servoWrite(motorR, 0)
     RPL.servoWrite(motorL, 0)
 
