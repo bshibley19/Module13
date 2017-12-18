@@ -7,8 +7,10 @@ motorL = 1
 motorR = 0
 t_end = time.time() + 3
 t_max = time.time() + 7
+x = 1
+y = 1
 
-def run_interval():
+while x + y = 2:
     while time.time() < t_end:
         RPL.servoWrite(motorR, 1000)
         RPL.servoWrite(motorL, 2000)
@@ -19,5 +21,3 @@ def run_interval():
 
     while time.time() > t_max:
         reload(time)
-
-run_interval()
