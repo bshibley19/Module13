@@ -19,5 +19,5 @@ while 1 + 1 == 2:
 
     while time.time() > t_max:
         reload(time)
-        break
+    return
 
