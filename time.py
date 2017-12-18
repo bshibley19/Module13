@@ -20,5 +20,5 @@ def runtime():
     while time.time() > t_max:
         reload(time)
 
-runtime(time.time()):
+runtime():
 
