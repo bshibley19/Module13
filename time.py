@@ -8,15 +8,17 @@ motorR = 0
 t_end = time.time() + 3
 t_max = time.time() + 7
 
-while time.time() < t_end:
-    RPL.servoWrite(motorR, 1000)
-    RPL.servoWrite(motorL, 2000)
+def runtime():
+    while time.time() < t_end:
+        RPL.servoWrite(motorR, 1000)
+        RPL.servoWrite(motorL, 2000)
 
-while time.time() > t_end and time.time() < t_max:
-    RPL.servoWrite(motorR, 0)
-    RPL.servoWrite(motorL, 0)
+    while time.time() > t_end and time.time() < t_max:
+        RPL.servoWrite(motorR, 0)
+        RPL.servoWrite(motorL, 0)
 
-while time.time() > t_max:
-    reload(time)
+    while time.time() > t_max:
+        reload(time)
 
+runtime(time.time()):
 
