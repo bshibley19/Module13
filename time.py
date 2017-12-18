@@ -20,4 +20,4 @@ def run_interval():
     while time.time() > t_max:
         reload(time)
 
-run_interval(time.time() + 60)
+run_interval()
