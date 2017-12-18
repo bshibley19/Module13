@@ -10,7 +10,7 @@ t_max = time.time() + 7
 x = 1
 y = 1
 
-while x + y = 2:
+while x + y == 2:
     while time.time() < t_end:
         RPL.servoWrite(motorR, 1000)
         RPL.servoWrite(motorL, 2000)
