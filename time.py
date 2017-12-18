@@ -18,7 +18,6 @@ def runtime():
         RPL.servoWrite(motorL, 0)
 
     while time.time() > t_max:
-        time.time() = 0
+        reload(time.time())
 
 runtime()
-
