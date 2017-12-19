@@ -9,6 +9,7 @@ t_end = time.time() + 3
 t_max = time.time() + 7
 
 while True:
+    reload(time)
     while time.time() < t_end:
         RPL.servoWrite(motorR, 1000)
         RPL.servoWrite(motorL, 2000)
@@ -18,6 +19,4 @@ while True:
         RPL.servoWrite(motorL, 0)
 
     while time.time() > t_max:
-        reload(time)
-        return
-
+        break
