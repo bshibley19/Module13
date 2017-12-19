@@ -19,3 +19,4 @@ while True:
 
     while time.time() > t_max:
         reload(time)
+        break
