@@ -19,4 +19,6 @@ while True:
         RPL.servoWrite(motorL, 0)
 
     while time.time() > t_max:
-        break
+        if not time.time() < t_max:
+            break
+    
