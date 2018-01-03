@@ -16,6 +16,6 @@ while True:
     while time.time() > time + i and time.time() < time + e:
         RPL.servoWrite(motorR, 0)
         RPL.servoWrite(motorL, 0)
-    while time.time() > time + e
+    while time.time() > time + e:
         i = i + 4
         e = e + 4
