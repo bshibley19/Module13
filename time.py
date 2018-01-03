@@ -5,18 +5,19 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
 motorL = 1
 motorR = 0
-t_end = time.time() + 3
-t_max = time.time() + 7
+time = time.time()
+i = 3
+e = 6
 
 while True:
-    reload(time)
-    while time.time() < t_end:
+    while time.time() < time + i:
         RPL.servoWrite(motorR, 1000)
         RPL.servoWrite(motorL, 2000)
-
-    while time.time() > t_end and time.time() < t_max:
+print(time.time)
+    while time.time() > time + i and time.time() < time + e:
         RPL.servoWrite(motorR, 0)
         RPL.servoWrite(motorL, 0)
 
-    if time.time() < t_max:
-        break
+    while time.time() > time + e
+        i = i + 4
+        e = e + 4
