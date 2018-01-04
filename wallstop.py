@@ -39,4 +39,3 @@ if RPL.digitalRead(sensor_pin) == 0:
         while time.time() < time.time() + 0.6:
             RPL.servoWrite(motorR, 0)
             RPL.servoWrite(motorL, 0)
-
