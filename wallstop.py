@@ -40,11 +40,3 @@ if RPL.digitalRead(sensor_pin) == 0:
             RPL.servoWrite(motorR, 0)
             RPL.servoWrite(motorL, 0)
 
-def forwardSpeedChanges(change, mn = 1600, mx = 2900):
-  global motorR_forward
-  global motorL_forward
-  motorR_forward += change
-  motorL_forward += change
-  motorR_forward = max(min(motorR_forward, mx), mn)
-  motorL_forward = max(min(motorL_forward, mx), mn)
-  print_speed()
