@@ -12,7 +12,7 @@ import time
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
 motorL = 1
-motorR = 0
+motorR = 7
 sensor_pin = 23
 
 RPL.servoWrite(motorR, 2000)
