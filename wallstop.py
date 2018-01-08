@@ -5,7 +5,7 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
 motorL = 1
 motorR = 7
-sensor_pin = 24
+sensor_pin = 16
 
 RPL.servoWrite(motorR, 2000)
 RPL.servoWrite(motorL, 1000)
