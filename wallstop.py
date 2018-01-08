@@ -11,6 +11,6 @@ RPL.servoWrite(motorR, 2000)
 RPL.servoWrite(motorL, 1000)
 RPL.pinMode(sensor_pin,RPL.INPUT)
 
-if RPL.digitalRead(sensor_pin) == 1:
+if RPL.digitalRead(sensor_pin) == 0:
     RPL.servoWrite(motorR, 0)
     RPL.servoWrite(motorL, 0)
