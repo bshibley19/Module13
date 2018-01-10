@@ -7,7 +7,7 @@ motorL = 1
 motorR = 7
 sensor_pin = 16
 move = time.time()
-i = 0.4
+i = 5
 j = 0.7
 
 
