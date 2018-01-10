@@ -12,6 +12,8 @@ j = 0.7
 
 
 RPL.pinMode(sensor_pin,RPL.INPUT)
+RPL.servoWrite(motorR, 1000)
+RPL.servoWrite(morotL, 1000)
 
 #if RPL.digitalRead(sensor_pin) == 0:
 while time.time() < (move + i):
