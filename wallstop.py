@@ -10,7 +10,8 @@ move = time.time()
 j = 3
 i = 5
 
-
+RPL.servoWrite(motorR, 1000)
+RPL.servoWrite(motorL, 2000)
 
 RPL.pinMode(sensor_pin,RPL.INPUT)
 
