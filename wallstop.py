@@ -9,11 +9,8 @@ sensor_pin = 16
 move = time.time()
 i = 0.4
 j = 0.7
-slowR = RPL.servoWrite(motorR, 1480)
-slowL = RPL.servoWrite(motorL, 1520)
 
-RPL.servoWrite(motorR, 2000)
-RPL.servoWrite(motorL, 1000)
+
 RPL.pinMode(sensor_pin,RPL.INPUT)
 
 if RPL.digitalRead(sensor_pin) == 0:
