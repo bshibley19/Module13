@@ -8,7 +8,7 @@ motorR = 7
 sensor_pin = 16
 move = time.time()
 j = 3
-i = 5.5
+i = 5.2
 
 while RPL.digitalRead(sensor_pin) == 1:
     RPL.servoWrite(motorR, 1000)
