@@ -11,8 +11,8 @@ j = 3
 i = 5
 
 while RPL.digitalRead(sensor_pin) == 1:
-RPL.servoWrite(motorR, 1000)
-RPL.servoWrite(motorL, 2000)
+    RPL.servoWrite(motorR, 1000)
+    RPL.servoWrite(motorL, 2000)
 
 
 while RPL.digitalRead(sensor_pin) == 0:
