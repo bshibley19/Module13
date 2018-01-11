@@ -13,6 +13,8 @@ i = 5
 while RPL.digitalRead(sensor_pin) == 1:
     RPL.servoWrite(motorR, 1000)
     RPL.servoWrite(motorL, 2000)
+    if RPL.digitalRead(sensor_pin) != 1:
+        break
 
 
 while RPL.digitalRead(sensor_pin) == 0:
