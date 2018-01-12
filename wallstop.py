@@ -6,7 +6,7 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 motorL = 1
 motorR = 7
 sensor_pin = 16
-i = 3
+i = 2.8
 
 while RPL.digitalRead(sensor_pin) == 1:
     RPL.servoWrite(motorR, 1000)
