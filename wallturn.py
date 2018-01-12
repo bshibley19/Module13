@@ -19,8 +19,8 @@ while RPL.digitalRead(sensor_pin) == 1:
 while RPL.digitalRead(sensor_pin) == 0:
     move = time.time()
     while time.time() < (move + i):
-        RPL.servoWrite(motorR, 1490)
-        RPL.servoWrite(motorL, 1540)
+        RPL.servoWrite(motorR, 1480)
+        RPL.servoWrite(motorL, 1550)
     while time.time() > (move + i):
         RPL.servoWrite(motorR, 1000)
         RPL.servoWrite(motorL, 2000)
