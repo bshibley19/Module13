@@ -7,7 +7,7 @@ motorL = 1
 motorR = 7
 sensor_pin = 16
 j = 3
-i = 3.6
+i = 3.7
 
 while RPL.digitalRead(sensor_pin) == 1:
     RPL.servoWrite(motorR, 1000)
