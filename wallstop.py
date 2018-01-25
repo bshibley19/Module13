@@ -18,7 +18,7 @@ while RPL.digitalRead(sensor_pin) == 1:
         break
 
 while RPL.digitalRead(sensor_pin) == 0:
-    PTW.state['d1'] = RPL.digitalRead(sensor_pin)
+    PTW.state['d0'] = RPL.digitalRead(sensor_pin)
     move = time.time()
     PTW.post()
     while time.time() < (move + i):
