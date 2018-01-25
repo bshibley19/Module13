@@ -10,7 +10,7 @@ sensor_pin = 16
 i = 4.9
 
 while RPL.digitalRead(sensor_pin) == 1:
-    PTW.state['d1'] = RPL.digitalRead(sensor_pin)
+    PTW.state['d0'] = RPL.digitalRead(sensor_pin)
     RPL.servoWrite(motorR, 1000)
     RPL.servoWrite(motorL, 2000)
     PTW.post()
