@@ -13,15 +13,12 @@ RPL.servoWrite(motorL, 2000)
 RPL.pinMode(sensor_pin,RPL.INPUT)
 
 while RPL.digitalRead(sensor_pin) == 1:
-    PTW.state['d0'] = RPL.digitalRead(sensor_pin)
-    PTW.state['m1'] = RPL.digitalRead(sensor_pin)
-    PTW.state['m7'] = RPL.digitalRead(sensor_pin)
+    PTW.state['d1'] = RPL.digitalRead(sensor_pin)
     RPL.servoWrite(motorR, 1000)
     RPL.servoWrite(motorL, 2000)
     PTW.post()
 else:
-    PTW.state['d0'] = RPL.digitalRead(sensor_pin)
-    PTW.state['m1'] = RPL.digitalRead(sensor_pin)
-    PTW.state['m7'] = RPL.digitalRead(sensor_pin)
+    PTW.state['d1'] = RPL.digitalRead(sensor_pin)
     RPL.servoWrite(motorR, 0)
     RPL.servoWrite(motorL, 0)
+    PTW.post()
