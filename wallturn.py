@@ -7,7 +7,7 @@ motorL = 1
 motorR = 7
 sensor_pin = 16
 j = 3
-i = 4.8
+i = 5.5
 
 while RPL.digitalRead(sensor_pin) == 1:
     PTW.state['d1'] = RPL.digitalRead(sensor_pin)
