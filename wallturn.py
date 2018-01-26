@@ -7,7 +7,7 @@ motorL = 1
 motorR = 7
 sensor_pin = 16
 j = 3
-i = 4.9
+i = 4.8
 
 while RPL.digitalRead(sensor_pin) == 1:
     PTW.state['d1'] = RPL.digitalRead(sensor_pin)
@@ -21,9 +21,14 @@ while RPL.digitalRead(sensor_pin) == 0:
     PTW.state['d1'] = RPL.digitalRead(sensor_pin)
     move = time.time()
     while time.time() < (move + i):
+        PTW.state['m1'] = RPL.digitalRead(sensor_pin)
+        PTW.state['m7'] = RPL.digitalRead(sensor_pin)
         RPL.servoWrite(motorR, 1490)
         RPL.servoWrite(motorL, 1520)
+        PTW.post()
     while time.time() > (move + i):
+        PTW.state['m1'] = RPL.digitalRead(sensor_pin)
+        PTW.state['m7'] = RPL.digitalRead(sensor_pin)
         RPL.servoWrite(motorR, 1460)
         RPL.servoWrite(motorL, 1550)
-
+        PTW.post()
