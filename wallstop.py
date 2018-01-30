@@ -14,7 +14,7 @@ while RPL.digitalRead(sensor_pin) == 1:
     RPL.servoWrite(motorR, 1000)
     RPL.servoWrite(motorL, 2000)
     PTW.post()
-    time.sleep(0.2)
+    time.sleep(0.22)
     if RPL.digitalRead(sensor_pin) != 1:
         break
 
