@@ -6,10 +6,12 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
 motorL = 1
 motorR = 0
-t_ime = time.time()
 i = 3
 e = 6
 
+
+
+t_ime = time.time()
 while True:
     while time.time() < t_ime + i:
         RPL.servoWrite(motorR, 1000)
