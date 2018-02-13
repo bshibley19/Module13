@@ -9,7 +9,9 @@ motorR = 0
 i = 3
 e = 6
 
-
+cool = time.time()
+while time.time() < time.time + 5:
+    print "Brad Shibley is awesome!!!!!"
 
 t_ime = time.time()
 while True:
