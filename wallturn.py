@@ -11,6 +11,10 @@ sensor_L = 18
 j = 3
 i = 4.0
 
+cool = time.time()
+while time.time() < time.time + 5:
+    print "Brad Shibley is awesome!!!!!"
+
 while RPL.digitalRead(sensor_R) and RPL.digitalRead(sensor_M) and RPL.digitalRead(sensor_L)== 1:
     PTW.state['d1'] = RPL.digitalRead(sensor_pin)
     RPL.servoWrite(motorR, 1000)
