@@ -8,10 +8,6 @@ motorL = 1
 motorR = 0
 sensor_pin = 16
 
-cool = time.time()
-while time.time() < time.time + 5:
-    print "Brad Shibley is awesome!!!!!"
-
 RPL.servoWrite(motorR, 1000)
 RPL.servoWrite(motorL, 2000)
 RPL.pinMode(sensor_pin,RPL.INPUT)
