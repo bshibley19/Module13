@@ -20,7 +20,7 @@ while RPL.analogRead(analog_1) > 420 and RPL.analogRead(analog_1) < 620:
 
 while RPL.analogRead(analog_1) < 420 and RPL.analogRead(analog_1) > 200:
     move = time.time()
-    while timetime() < (move + 1):
+    while time.time() < (move + 1):
         RPL.servoWrite(motorR, 1530)
         RPL.servoWrite(motorL, 1460)
     while time.time() > (move + 1):
