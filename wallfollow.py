@@ -12,7 +12,7 @@ analog_1 = 0
 j = 3
 i = 4.0
 
-while RPL.analogRead(analog_1) > 420 and RPL.analogRead(analog_1) < 620:
+while RPL.analogRead(analog_1) > 420:
     RPL.servoWrite(motorR, 1000)
     RPL.servoWrite(motorL, 2000)
     if RPL.digitalRead(sensor_R) != 1 or RPL.analogRead < 420:
