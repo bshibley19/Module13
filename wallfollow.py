@@ -12,6 +12,9 @@ analog_1 = 0
 j = 3
 i = 4.0
 
+RPL.servoWrite(motorR, 1000)
+RPL.servoWrite(motorL, 2000)
+
 while RPL.analogRead(analog_1) > 460 and RPL.analogRead(analog_1) < 800:
     RPL.servoWrite(motorR, 1000)
     RPL.servoWrite(motorL, 2000)
