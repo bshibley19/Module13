@@ -25,14 +25,14 @@ while True:
         move = time.time()
         while move < time.time() + 1.5:
             RPL.servoWrite(motorL, 1450)
-            RPL.servoWrite(motorR, 1530)
+            RPL.servoWrite(motorR, 0)
         else: 
             break
         
     while RPL.analogRead(0) > 600:
         cool = time.time()
         while move < time.time + 1.5:
-            RPL.servoWrite(motorL, 1465)
+            RPL.servoWrite(motorL, 0)
             RPL.servoWrite(motorR, 1530)
         else: 
             break
