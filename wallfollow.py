@@ -13,15 +13,11 @@ j = 3
 i = 4.0
 
 while True:
-    while RPL.analogRead(0) > 550 and RPL.analogRead(0) < 600:
+    while RPL.analogRead(0) > 500 and RPL.analogRead(0) < 600:
         RPL.servoWrite(motorL, 1000)
         RPL.servoWrite(motorR, 1000)
-        if RPL.analogRead(0) < 550:
-            break
-        if RPL.analogRead(0) > 600:
-            break
         
-    while RPL.analogRead(0) < 550:
+    while RPL.analogRead(0) < 500:
         move = time.time()
         while move < time.time() + 1.5:
             RPL.servoWrite(motorL, 1450)
