@@ -12,20 +12,28 @@ analog_1 = 0
 j = 3
 i = 4.0
 
-RPL.servoWrite(motorR, 1000)
-RPL.servoWrite(motorL, 2000)
-
-while RPL.analogRead(analog_1) > 460 and RPL.analogRead(analog_1) < 800:
-    RPL.servoWrite(motorR, 1000)
-    RPL.servoWrite(motorL, 2000)
-    if RPL.digitalRead(sensor_R) != 1 or RPL.analogRead < 420:
-        break
-
-while RPL.analogRead(analog_1) < 460 and RPL.analogRead(analog_1) > 200:
-    move = time.time()
-    while time.time() < (move + 1):
-        RPL.servoWrite(motorR, 1530)
-        RPL.servoWrite(motorL, 1460)
-    while time.time() > (move + 1):
-        break
-    
+while True:
+    while RPL.analogRead(0) > 550 and RPL.analogRead(0) < 600:
+        RPL.servoWrite(motorL, 1000)
+        RPL.servoWrite(motorR, 1000)
+        if RPL.analogRead(0) < 550:
+            break
+        if RPL.analogRead(0) > 600:
+            break
+        
+    while RPL.analogRead(0) < 550:
+        move = time.time()
+        while move < time.time() + 1.5:
+            RPL.servoWrite(motorL, 1450)
+            RPL.servoWrite(motorR, 1530)
+        else: 
+            break
+        
+    while RPL.analogRead(0) > 600:
+        cool = time.time()
+        while move < time.time + 1.5:
+            RPL.servoWrite(motorL, 1465)
+            RPL.servoWrite(motorR, 1530)
+        else: 
+            break
+         
