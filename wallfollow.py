@@ -12,20 +12,20 @@ analog_1 = 0
 i = 3
 
 def forward():
-    RPL.servoWrite(0, 1000)
-    RPL.servoWrite(1, 1000)
+    RPL.servoWrite(0, 1400)
+    RPL.servoWrite(1, 1600)
     print "Forward"
 def stop():
     RPL.servoWrite(0, 0)
     RPL.servoWtire(1, 0)
     print "stop"
 def left():
-    RPL.servoWrite(1, 1460)
-    RPL.servoWrite(0, 1560)
+    RPL.servoWrite(1, 1550)
+    RPL.servoWrite(0, 1430)
     print "Turning Left"
 def right():
-    RPL.servoWrite(0, 1550)
-    RPL.servoWrite(1, 1430)
+    RPL.servoWrite(0, 1460)
+    RPL.servoWrite(1, 1560)
     print "Turning Right"
     
 while True:
