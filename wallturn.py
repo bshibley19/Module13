@@ -32,26 +32,26 @@ while RPL.digitalRead(sensor_R) or RPL.digitalRead(sensor_M) or RPL.digitalRead(
             RPL.servoWrite(motorL, 1460)
             PTW.post()
     while RPL.digitalRead(sensor_M) == 0:
-    		fun = time.time()
-    		while time.time() < (fun + i):
-        		RPL.servoWrite(motorL, 1000)
-        		RPL.servoWrite(motorR, 1510)
-		if time.time() > (go + i):
-        		RPL.servoWrite(motorL, 1000)
-        		RPL.servoWrite(motorR, 2000)
-	while RPL.digitalRead(sensor_M) and RPL.digitalRead(sensor_L) == 0:
-    		go = time.time()
-    		while time.time() < (go + i):
-        		RPL.servoWrite(motorL, 1000)
-        		RPL.servoWrite(motorR, 1510)
-		if time.time() > (go + i):
-        		RPL.servoWrite(motorL, 1000)
-        		RPL.servoWrite(motorR, 2000)
-	while RPL.digitalRead(sensor_M) and RPL.digitalRead(sensor_R) == 0:
-   		brad = time.time()
-   		while time.time() < (brad + i):
-        		RPL.servoWrite(motorL, 1490)
-        		RPL.servoWrite(motorR, 2000)
-		if time.time() > (brad + i):
-        		RPL.servoWrite(motorL, 1000)
-        		RPL.servoWrite(motorR, 2000)
+    	fun = time.time()
+    	while time.time() < (fun + i):
+        	RPL.servoWrite(motorL, 1000)
+        	RPL.servoWrite(motorR, 1510)
+	if time.time() > (go + i):
+        	RPL.servoWrite(motorL, 1000)
+        	RPL.servoWrite(motorR, 2000)
+    while RPL.digitalRead(sensor_M) and RPL.digitalRead(sensor_L) == 0:
+    	go = time.time()
+    	while time.time() < (go + i):
+        	RPL.servoWrite(motorL, 1000)
+        	RPL.servoWrite(motorR, 1510)
+	if time.time() > (go + i):
+        	RPL.servoWrite(motorL, 1000)
+        	RPL.servoWrite(motorR, 2000)
+    while RPL.digitalRead(sensor_M) and RPL.digitalRead(sensor_R) == 0:
+   	brad = time.time()
+   	while time.time() < (brad + i):
+        	RPL.servoWrite(motorL, 1490)
+        	RPL.servoWrite(motorR, 2000)
+	if time.time() > (brad + i):
+        	RPL.servoWrite(motorL, 1000)
+        	RPL.servoWrite(motorR, 2000)
