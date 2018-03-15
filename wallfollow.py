@@ -21,11 +21,11 @@ def stop():
     print "stop"
 def right():
     RPL.servoWrite(1, 1550)
-    RPL.servoWrite(0, 1430)
+    RPL.servoWrite(0, 1440)
     print "Turning Right"
 def left():
     RPL.servoWrite(0, 1460)
-    RPL.servoWrite(1, 1560)
+    RPL.servoWrite(1, 1550)
     print "Turning Left"
     
 while True:
