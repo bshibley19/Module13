@@ -3,29 +3,52 @@ import time
 import post_to_web as PTW
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
 
-motorL = 1
-motorR = 7
+motorL = 0
+motorR = 1
 sensor_L = 16
 sensor_M = 17
 sensor_R = 18
 analog_1 = 0
-j = 3
-i = 4.0
+i = 3
 
+def forward():
+    RPL.servoWrite(0, 1000)
+    RPL.servoWrite(1, 1000)
+    print "Forward"
+def stop():
+    RPL.servoWrite(0, 0)
+    RPL.servoWtire(1, 0)
+    print "stop"
+def left():
+    RPL.servoWrite(1, 1460)
+    RPL.servoWrite(0, 1560)
+    print "Turning Left"
+def right():
+    RPL.servoWrite(0, 1550)
+    RPL.servoWrite(1, 1430)
+    print "Turning Right"
+    
 while True:
-    while RPL.analogRead(0) > 500 and RPL.analogRead(0) < 700:
-        RPL.servoWrite(motorL, 0)
-        RPL.servoWrite(motorR, 0)
-        
-    while RPL.analogRead(0) < 500:
-        move = time.time()
-        while move < time.time() + 1.5:
-            RPL.servoWrite(motorL, 1450)
-            RPL.servoWrite(motorR, 1530)
-           
-    while RPL.analogRead(0) > 700:
-        cool = time.time()
-        while move < time.time + 1.5:
-            RPL.servoWrite(motorL, 0)
-            RPL.servoWrite(motorR, 1530)
-            
+    sensor = RPL.analogRead(0)
+    move_forward = False 
+    move_left = False
+    move_right = False
+    go_stop = False
+    
+    if sensor > 400:
+        move_left = True
+    elif sensor > 200:
+        move_forward = True
+    else:
+        move_right = True
+   
+    if move_forward:
+        forward()
+    elif go_stop:
+        stop()
+    elif move_left:
+        left()
+    elif move_right:
+        right()
+
+
