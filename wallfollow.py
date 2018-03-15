@@ -19,11 +19,11 @@ def stop():
     RPL.servoWrite(0, 0)
     RPL.servoWtire(1, 0)
     print "stop"
-def left():
+def right():
     RPL.servoWrite(1, 1550)
     RPL.servoWrite(0, 1430)
     print "Turning Left"
-def right():
+def left():
     RPL.servoWrite(0, 1460)
     RPL.servoWrite(1, 1560)
     print "Turning Right"
