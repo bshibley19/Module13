@@ -22,11 +22,11 @@ def stop():
 def right():
     RPL.servoWrite(1, 1550)
     RPL.servoWrite(0, 1430)
-    print "Turning Left"
+    print "Turning Right"
 def left():
     RPL.servoWrite(0, 1460)
     RPL.servoWrite(1, 1560)
-    print "Turning Right"
+    print "Turning Left"
     
 while True:
     sensor = RPL.analogRead(0)
@@ -36,11 +36,11 @@ while True:
     go_stop = False
     
     if sensor > 400:
-        move_left = True
+        move_right = True
     elif sensor > 200:
         move_forward = True
     else:
-        move_right = True
+        move_left = True
    
     if move_forward:
         forward()
