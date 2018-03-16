@@ -22,8 +22,11 @@ def left():
     RPL.servoWrite(1, 1550)
     print "Turning Left"
 def small_correct():
-    
+    RPL.servoWrite(1, 1550)
+    RPL.servoWrite(0, 1440)
 def large_correct():
+    RPL.servoWrite(0, 1460)
+    RPL.servoWrite(1, 1550)
     
 while True:
     sensor_1 = RPL.analogRead(0)
