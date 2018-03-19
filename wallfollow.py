@@ -51,6 +51,10 @@ while True:
         go_small = True
     elif sensor_1 - sensor_2 > 350:
         go_large = True
+    if sensor_2 - sensor_1 > 200:
+        go_small = True
+    elif sensor_2 - sensor_1 > 350:
+        go_large = True
 
      
    
