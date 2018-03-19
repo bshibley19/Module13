@@ -6,27 +6,27 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 i = 3
 
 def forward():
-    RPL.servoWrite(0, 1400)
-    RPL.servoWrite(1, 1600)
+    RPL.servoWrite(6, 1400)
+    RPL.servoWrite(7, 1600)
     print "Forward"
 def stop():
-    RPL.servoWrite(0, 0)
-    RPL.servoWtire(1, 0)
+    RPL.servoWrite(6, 0)
+    RPL.servoWtire(7, 0)
     print "stop"
 def right():
-    RPL.servoWrite(1, 1550)
-    RPL.servoWrite(0, 1440)
+    RPL.servoWrite(7, 1550)
+    RPL.servoWrite(6, 1440)
     print "Turning Right"
 def left():
-    RPL.servoWrite(0, 1460)
-    RPL.servoWrite(1, 1550)
+    RPL.servoWrite(6, 1460)
+    RPL.servoWrite(7, 1550)
     print "Turning Left"
 def small_correct():
-    RPL.servoWrite(1, 1550)
-    RPL.servoWrite(0, 1440)
+    RPL.servoWrite(7, 1550)
+    RPL.servoWrite(6, 1440)
 def large_correct():
-    RPL.servoWrite(0, 1460)
-    RPL.servoWrite(1, 1550)
+    RPL.servoWrite(6, 1460)
+    RPL.servoWrite(7, 1550)
     
 while True:
     sensor_1 = RPL.analogRead(0)
