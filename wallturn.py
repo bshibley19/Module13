@@ -36,7 +36,7 @@ while RPL.digitalRead(sensor_R) or RPL.digitalRead(sensor_M) or RPL.digitalRead(
     	while time.time() < (fun + i):
         	RPL.servoWrite(motorL, 1000)
         	RPL.servoWrite(motorR, 1510)
-	if time.time() > (go + i):
+	if time.time() > (fun + i):
         	RPL.servoWrite(motorL, 1000)
         	RPL.servoWrite(motorR, 2000)
     while RPL.digitalRead(sensor_M) and RPL.digitalRead(sensor_L) == 0:
