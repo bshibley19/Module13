@@ -30,7 +30,7 @@ def large_correct():
     
 while True:
     sensor_1 = RPL.analogRead(0)
-    sensor_2 = RPL.analodRead(1)
+    sensor_2 = RPL.analogRead(1)
     move_forward = False 
     move_left = False
     move_right = False
