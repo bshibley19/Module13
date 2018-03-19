@@ -22,12 +22,12 @@ def left():
     RPL.servoWrite(7, 1550)
     print "Turning Left"
 def small_correct():
+    RPL.servoWrite(6, 1460)
     RPL.servoWrite(7, 1550)
-    RPL.servoWrite(6, 1440)
     print "small correction"
 def large_correct():
     RPL.servoWrite(6, 1460)
-    RPL.servoWrite(7, 1550)
+    RPL.servoWrite(7, 1570)
     print "large correction"
     
 while True:
