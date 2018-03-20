@@ -45,9 +45,9 @@ while True:
     elif sensor_1 > 200:
         move_forward = True
     elif sensor_1 - sensor_2 > 80:
-        start_right = True
+        right = True
     elif sensor_2 - sensor_1 > 80:
-        start_left = True
+        left = True
     else: 
         move_left = True
 
