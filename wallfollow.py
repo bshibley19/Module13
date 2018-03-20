@@ -24,11 +24,11 @@ def left():
 def small_correct():
     RPL.servoWrite(6, 1460)
     RPL.servoWrite(7, 1550)
-    print "small correction"
+    print "SMALL correction"
 def large_correct():
     RPL.servoWrite(6, 1460)
     RPL.servoWrite(7, 1570)
-    print "large correction"
+    print "LARGE correction"
     
 while True:
     sensor_1 = RPL.analogRead(0)
@@ -44,17 +44,16 @@ while True:
         move_right = True
     elif sensor_1 > 200:
         move_forward = True
-    else: 
-        move_left = True
-    
-    if sensor_1 - sensor_2 > 200:
+    elif sensor_1 - sensor_2 > 200:
         go_small = True
     elif sensor_1 - sensor_2 > 350:
         go_large = True
-    if sensor_2 - sensor_1 > 200:
+    elif sensor_2 - sensor_1 > 200:
         go_small = True
     elif sensor_2 - sensor_1 > 350:
         go_large = True
+    else: 
+        move_left = True
 
      
    
