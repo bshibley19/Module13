@@ -13,11 +13,11 @@ def stop():
     RPL.servoWrite(6, 0)
     RPL.servoWtire(7, 0)
     print "stop"
-def right():
+def start_right():
     RPL.servoWrite(7, 1550)
     RPL.servoWrite(6, 1420)
     print "Turning Right"
-def left():
+def start_left():
     RPL.servoWrite(6, 1460)
     RPL.servoWrite(7, 1550)
     print "Turning Left"
@@ -45,9 +45,9 @@ while True:
     elif sensor_1 > 200:
         move_forward = True
     elif sensor_1 - sensor_2 > 80:
-        right = True
+        start_right = True
     elif sensor_2 - sensor_1 > 80:
-        left = True
+        start_left = True
     else: 
         move_left = True
 
@@ -58,9 +58,9 @@ while True:
     elif stop:
         stop()
     elif move_left:
-        left()
+        start_left()
     elif move_right:
-        right()
+        start_right()
     elif right:
         small_correct()
     elif left:
