@@ -55,15 +55,21 @@ while True:
    
     if move_forward:
         forward()
+        move_forward = False
     elif stop:
         stop()
+        stop = False
     elif move_left:
         start_left()
+        move_left = False
     elif move_right:
         start_right()
+        move_right = False
     elif right:
         small_correct()
+        right = False
     elif left:
         large_correct()
+        left = False
 
 
