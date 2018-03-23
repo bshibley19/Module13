@@ -6,3 +6,4 @@
    - Time Intervals
    - Motor Actions based on Sensor Readings
    - Wall Turning
+   - Wall Following
