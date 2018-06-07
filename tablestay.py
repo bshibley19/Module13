@@ -25,7 +25,7 @@ while True:
     sensorL = RPL.digitalRead(22)
     sensorM = RPL.digitalRead(20)
     sensorR = RPL.digitalRead(23)
-    move_forward = False 
+    move_forward = False
     move_left = False
     move_right = False
     go_reverse = False
@@ -37,6 +37,8 @@ while True:
         go_reverse = True
     elif sensorR == 1:
         move_left = True
+    else:
+        move_forward = True
    
    
     if move_forward:
